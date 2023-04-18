@@ -21,7 +21,7 @@ object.hello
 
 class Customer
     @@no_of_customers = 0
-    def initiatilize(id, name, addr)
+    def initialize(id, name, addr)
         @cust_id = id
         @cust_name = name
         @cust_addr = addr
@@ -36,3 +36,13 @@ class Customer
         puts "Total number of customers: #@@no_of_customers"
     end
 end
+
+# Create Objects
+cust1 = Customer.new("1", "John", "Wisdom Apartments, Ludhiya")
+cust2 = Customer.new("2", "Poul", "New Empire road, Khandala")
+
+# Call Methods
+cust1.display_details()
+cust1.total_no_of_customers()
+cust2.display_details()
+cust2.total_no_of_customers()
