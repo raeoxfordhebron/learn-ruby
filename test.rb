@@ -50,3 +50,32 @@ cust2.total_no_of_customers()
 cust3 = Customer.new("3", "Raghu", "Madapur, Hyderabad")
 cust4 = Customer.new("4", "Rahman", "Akkayya palem, Vishakhapatnam")
 cust4.total_no_of_customers()
+
+# The Accessor & Setter Methods
+
+# define a class
+class Box
+    # constructor method
+    def initialize(w, h)
+        @width, @height = w, h 
+    end
+
+    # accessor methods
+    def printWidth
+        @width
+    end
+
+    def printHeight
+        @height
+    end
+end
+
+# create an object
+box = Box.new(10, 20)
+
+# use acessor methods
+x = box.printWidth()
+y = box.printHeight()
+
+puts "Width of the box is : #{x}"
+puts "Height of the box is: #{y}"
