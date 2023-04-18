@@ -74,7 +74,7 @@ class Box
     end
 
     # make them private
-    private :printWidth, :printHeight
+    # private :printWidth, :printHeight
 
     # setter methods
     def setWidth=(value)
@@ -97,7 +97,7 @@ class Box
     end
 
     # make it protected
-    protected :printArea
+    # protected :printArea
 
     # class method
     def self.printCount()
@@ -139,3 +139,15 @@ puts "String representation of box is: #{box}"
 
 # try to call protected or methods
 box.printArea()
+
+# Variable Number of Parameters
+
+def sample (*test)
+    puts "The number of parameters #{test.length}"
+    for i in 0...test.length
+        puts "The parameters are #{test[i]}"
+    end
+end
+
+sample "Zara", "6", "F"
+sample "Mac", "36", "M", "MCA"
