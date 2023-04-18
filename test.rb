@@ -46,3 +46,7 @@ cust1.display_details()
 cust1.total_no_of_customers()
 cust2.display_details()
 cust2.total_no_of_customers()
+
+cust3 = Customer.new("3", "Raghu", "Madapur, Hyderabad")
+cust4 = Customer.new("4", "Rahman", "Akkayya palem, Vishakhapatnam")
+cust4.total_no_of_customers()
