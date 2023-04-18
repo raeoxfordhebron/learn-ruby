@@ -68,6 +68,20 @@ class Box
     def printHeight
         @height
     end
+
+    # setter methods
+    def setWidth=(value)
+        @width = value
+    end
+
+    def setHeight=(value)
+        @height = value
+    end
+
+    # instance method
+    def getArea
+        @width*@height
+    end
 end
 
 # create an object
@@ -76,6 +90,14 @@ box = Box.new(10, 20)
 # use acessor methods
 x = box.printWidth()
 y = box.printHeight()
+
+# use setter methods
+box.setWidth = 30
+box.setHeight = 50
+
+# call instance methods
+a = box.getArea()
+puts "Area of the box is : #{a}"
 
 puts "Width of the box is : #{x}"
 puts "Height of the box is: #{y}"
