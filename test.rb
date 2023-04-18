@@ -151,3 +151,11 @@ end
 
 sample "Zara", "6", "F"
 sample "Mac", "36", "M", "MCA"
+
+# Ranges as Sequences
+$, = "," # Array value separator
+range1 = (1..10).to_a
+range2 = ('bar'..'bat').to_a
+
+puts "#{range1}"
+puts "#{range2}"
