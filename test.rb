@@ -55,9 +55,13 @@ cust4.total_no_of_customers()
 
 # define a class
 class Box
+    # Initialize our class variables
+    @@count = 0
     # constructor method
     def initialize(w, h)
         @width, @height = w, h 
+
+        @@count += 1
     end
 
     # accessor methods
@@ -82,6 +86,11 @@ class Box
     def getArea
         @width*@height
     end
+
+    # class method
+    def self.printCount()
+        puts "Box count is: #@@count"
+    end
 end
 
 # create an object
@@ -101,3 +110,9 @@ puts "Area of the box is : #{a}"
 
 puts "Width of the box is : #{x}"
 puts "Height of the box is: #{y}"
+
+# create another object
+box2 = Box.new(30, 100)
+
+# call class method to print box count
+Box.printCount()
