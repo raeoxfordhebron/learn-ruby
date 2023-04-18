@@ -64,7 +64,7 @@ class Box
         @@count += 1
     end
 
-    # accessor methods
+    # accessor methods - private
     def printWidth
         @width
     end
@@ -72,6 +72,9 @@ class Box
     def printHeight
         @height
     end
+
+    # make them private
+    private :printWidth, :printHeight
 
     # setter methods
     def setWidth=(value)
@@ -82,14 +85,28 @@ class Box
         @height = value
     end
 
-    # instance method
+    # instance method by default it is public
     def getArea
         @width*@height
     end
 
+    # instance method to print area
+    def printArea 
+        @area = printWidth() * printHeight()
+        puts "Big box area is : #@area"
+    end
+
+    # make it protected
+    protected :printArea
+
     # class method
     def self.printCount()
         puts "Box count is: #@@count"
+    end
+
+    # define to_s method
+    def to_s
+        "(w:#@width, h:#@height)" # string formatting of the object
     end
 end
 
@@ -116,3 +133,9 @@ box2 = Box.new(30, 100)
 
 # call class method to print box count
 Box.printCount()
+
+# to_s method will be called in reference of string automatically
+puts "String representation of box is: #{box}"
+
+# try to call protected or methods
+box.printArea()
